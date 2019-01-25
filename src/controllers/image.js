@@ -40,7 +40,7 @@ ctrl.create = async (req,res) => {
             description: req.body.description
         })
         const imageSaved = await newImg.save();
-        res.redirect('/images');
+        res.redirect('/images/' + imgurl);
 
     }else{
         await fs.unlink(imageTempPath);
